@@ -46,7 +46,7 @@ def download_yt_to_wav(url, progress_bar, status_label, output_dir="downloads"):
             title = info.get('title', 'unknown_title')
 
         progress_bar["value"] = 100
-        status_label.config(text=f"{title} -> READY ✅")
+        status_label.config(text=f"{title} -> READY")
     except DownloadError:
         progress_bar["value"] = 0
         status_label.config(text="URL dosen't exist")
